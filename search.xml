@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Reaver-Crack-WIFI-WPS-PIN-Code</title>
+      <link href="/2024/01/05/Reaver-Crack-WIFI-WPS-PIN-Code/"/>
+      <url>/2024/01/05/Reaver-Crack-WIFI-WPS-PIN-Code/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>WPS（Wi-Fi Protected Setup)</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reaver -i wlp0s20f3mon -b D0:C7:C0:DF:2A:74 -vv</span><br></pre></td></tr></table></figure><p><code>-b &lt;BSSID&gt;</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Pentest </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQLMap usage tutorial</title>
       <link href="/2023/11/29/sqlmap-usage-tutorial/"/>
       <url>/2023/11/29/sqlmap-usage-tutorial/</url>
